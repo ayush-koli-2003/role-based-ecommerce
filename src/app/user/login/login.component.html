@@ -1,0 +1,25 @@
+<!-- <p>login works!</p> -->
+<form (ngSubmit)="onSubmit()" [formGroup]="inputFormGroup">
+    <label for="name">Enter your name: </label>
+    <input type="text" formControlName="name">
+    <p>Select your role: </p>
+    <input type="radio" formControlName="role" value="admin">
+    <label for="">Admin</label>
+    <input type="radio" formControlName="role" value="manager">
+    <label for="">Manager</label>
+    <input type="radio" formControlName="role" value="customerSupport">
+    <label for="">Customer Support</label>
+    
+    <br><button type="submit">Submit</button>
+</form>
+
+<!-- template-driven -->
+
+<!-- <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    <label for="">Name: </label>
+    <input type="text" [(ngModel)]="name" required>
+    <div *ngIf="!userForm.controls[name].valid && userForm.controls[name].touched"
+    class="alert alert-danger">Name is required</div>
+
+    <button type="submit">Submit</button>
+</form> -->
